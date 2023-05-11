@@ -15,9 +15,9 @@ public class Employee implements Serializable {
         this.age = age;
         this.email = email;
         this.hourlyWage = hourlyWage;
-        //employeeList.add("ID:"+this.id+" NAME:"+this.name+" AGE:"+this.age+" EMAIL:"+this.email+" WAGE:"+this.hourlyWage);
     }
     public static void addEmployeeToList(Employee employee){
+
         employeeList.add(employee);
     }
 
@@ -26,38 +26,47 @@ public class Employee implements Serializable {
         return this.id+" : "+this.name+" : "+this.age+" : "+this.email+" : "+this.hourlyWage;
     }
     public int getId() {
+
         return id;
     }
 
     public void setId(int id) {
+
         this.id = id;
     }
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public int getAge() {
+
         return age;
     }
 
     public void setAge(int age) {
+
         this.age = age;
     }
 
     public String getEmail() {
+
         return email;
     }
 
     public void setEmail(String email) {
+
         this.email = email;
     }
 
     public double getHourlyWage() {
+
         return hourlyWage;
     }
 
@@ -65,6 +74,7 @@ public class Employee implements Serializable {
         this.hourlyWage = hourlyWage;
     }
     public static ArrayList getEmployeeList() {
+
         return employeeList;
     }
 
