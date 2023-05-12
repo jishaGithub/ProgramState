@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class EmployeeUtils {
     public static void saveEmployeeState(ArrayList employeeList, String fileName) throws Exception {
+        System.out.println("Saving the state of the program as "+fileName);
         String stateOfObject = StringUtils.join(employeeList, "\n");
         File file1 = new File(fileName);
         if(file1.exists()) {
@@ -27,17 +28,17 @@ public class EmployeeUtils {
             String[] employeeArray = StringUtils.split(loadState, "\n");
             ArrayList<Employee> employeeLoadedArrayList = new ArrayList<>();
             for (String strEmployee : employeeArray) {
-                int i = 1;
+
                 String[] values = StringUtils.split(strEmployee, " : ");
                 int id = Integer.parseInt(values[0]);
                 String name = values[1];
                 int age = Integer.parseInt(values[2]);
                 String email = values[3];
-                Double hourlyWage = Double.valueOf(values[4]);
+                double hourlyWage = Double.parseDouble(values[4]);
                 employeeLoadedArrayList.add(new Employee(id, name, age, email, hourlyWage));
             }
-            for (int i = 0; i < employeeLoadedArrayList.size(); i++) {
-                System.out.println(employeeLoadedArrayList.get(i));
+            for (Employee employee: employeeLoadedArrayList) {
+                System.out.println(employee);
             }
         }
         else{

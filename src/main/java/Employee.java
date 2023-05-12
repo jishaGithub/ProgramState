@@ -1,7 +1,7 @@
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Employee implements Serializable {
+public class Employee {
 
     private static ArrayList<Employee> employeeList = new ArrayList<>();
     private int id;
